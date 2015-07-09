@@ -15,8 +15,8 @@ import static junit.framework.TestCase.assertEquals;
 public class SayHelloWSCallerTest {
     @Test
     public void testSayHello() throws MalformedURLException {
-        /*SayHelloWSCaller caller = new SayHelloWSCaller(new URL("http://localhost:8988/APMTestWebApp/service/HelloWs?wsdl"));
+        /*SayHelloWSCaller caller = new SayHelloWSCaller(new URL("http://localhost:8780/APMTestServiceAPP/webservice/sayHello?wsdl"));
         String result = caller.sayHello("Tom");
-        assertEquals("content should equals", result, "Hello, Tom!");   */
+        assertEquals("content should equals", result, "Hello, Tom!");*/
     }
 }

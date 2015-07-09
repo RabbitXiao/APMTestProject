@@ -3,26 +3,13 @@
          xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          id="WebApp_ID" version="2.5">
 
-    <display-name>jaxwsExample</display-name>
-
-    <listener>
-        <listener-class>com.sun.xml.ws.transport.http.servlet.WSServletContextListener</listener-class>
-    </listener>
-    <servlet>
-        <servlet-name>helloWs</servlet-name>
-        <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
-        <load-on-startup>1</load-on-startup>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>helloWs</servlet-name>
-        <url-pattern>/service/HelloWs</url-pattern>
-    </servlet-mapping>
+    <display-name>APMTestWebAPP</display-name>
     <servlet>
         <servlet-name>SayHelloServlet</servlet-name>
         <servlet-class>com.dell.apm.testwebapp.servlet.SayHelloServlet</servlet-class>
         <init-param>
             <param-name>WSDL_FILE</param-name>
-            <param-value>/META-INF/wsdl/HelloWs.wsdl</param-value>
+            <param-value>/META-INF/wsdl/SayHello.wsdl</param-value>
         </init-param>
     </servlet>
     <servlet-mapping>

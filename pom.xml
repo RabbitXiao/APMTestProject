@@ -22,5 +22,6 @@
 	</build>  
   <modules>
     <module>APMTestWebApp</module>
+    <module>APMTestServiceAPP</module>
   </modules>
 </project>

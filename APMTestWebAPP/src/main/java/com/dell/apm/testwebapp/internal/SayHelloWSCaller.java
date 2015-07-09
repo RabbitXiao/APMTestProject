@@ -1,6 +1,7 @@
 package com.dell.apm.testwebapp.internal;
 
-import com.dell.apm.testwebapp.internal.webservice.client.HelloWs;
+import com.dell.apm.testwebapp.internal.webservice.client.SayHello;
+
 import javax.xml.namespace.QName;
 import javax.xml.ws.Service;
 import java.net.URL;
@@ -16,10 +17,10 @@ public class SayHelloWSCaller {
     }
 
     public String sayHello(String content) {
-        QName qName = new QName("http://service.testwebapp.apm.dell.com/",
-                "HelloWsService");
+        QName qName = new QName("http://webservice.testserviceapp.apm.dell.com/",
+                "SayHelloService");
         Service service = Service.create(wsdlURL, qName);
-        HelloWs helloService = service.getPort(HelloWs.class);
+        SayHello helloService = service.getPort(SayHello.class);
         return helloService.sayHello(content);
     }
 

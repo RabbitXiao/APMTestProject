@@ -14,4 +14,4 @@ mvn idea:idea
 mvn package
 
 5. Generate client java code for webservice:
-mvn jaxws:wsimport
+mvn clean jaxws:wsimport
