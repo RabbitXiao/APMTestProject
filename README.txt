@@ -4,6 +4,7 @@ mvn archetype:generate -DgroupId=com.dell.apm.testproject -DartifactId=APMTestPr
 2. Create child APMTestWebAPP module
 mvn archetype:generate -DgroupId=com.dell.apm.testwebapp -DartifactId=APMTestWebAPP -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
 mvn archetype:generate -DgroupId=com.dell.apm.testserviceapp -DartifactId=APMTestServiceAPP -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
+mvn archetype:generate -DgroupId=com.quest.apm.testjavaee -DartifactId=APMTestJavaEE -DarchetypeArtifactId=maven-archetype-j2ee-simple -DinteractiveMode=false
 
 3. Create an Eclipse project with Maven:
 mvn eclipse:eclipse
