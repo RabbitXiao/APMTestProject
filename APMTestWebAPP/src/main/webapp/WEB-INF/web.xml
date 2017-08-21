@@ -36,16 +36,24 @@
         <session-timeout>120</session-timeout>
     </session-config>
     <servlet>
-        <servlet-name>VisitLinkServlet</servlet-name>
-        <servlet-class>com.dell.apm.testwebapp.servlet.VisitLinkServlet</servlet-class>
+        <servlet-name>VisitTheSameLinkServlet</servlet-name>
+        <servlet-class>com.dell.apm.testwebapp.servlet.VisitTheSameLinkServlet</servlet-class>
         <init-param>
             <param-name>configHost</param-name>
             <param-value>http://localhost:8090</param-value>
         </init-param>
     </servlet>
+    <servlet>
+        <servlet-name>VisitUrlServlet</servlet-name>
+        <servlet-class>com.dell.apm.testwebapp.servlet.VisitUrlServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
-        <servlet-name>VisitLinkServlet</servlet-name>
-        <url-pattern>/action/VisitLink</url-pattern>
+        <servlet-name>VisitUrlServlet</servlet-name>
+        <url-pattern>/action/VisitUrl</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VisitTheSameLinkServlet</servlet-name>
+        <url-pattern>/action/VisitTheSameLink</url-pattern>
     </servlet-mapping>
     <servlet>
         <servlet-name>SleepAFixedTimeServlet</servlet-name>
@@ -78,5 +86,21 @@
     <servlet-mapping>
         <servlet-name>AcquireMultipleDataSourceServlet</servlet-name>
         <url-pattern>/action/acquireMultipleDataSource</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>DepartmentServlet</servlet-name>
+        <servlet-class>com.dell.apm.testwebapp.servlet.DepartmentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DepartmentServlet</servlet-name>
+        <url-pattern>/action/department</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>DTOServlet</servlet-name>
+        <servlet-class>com.dell.apm.testwebapp.servlet.dto.DTOServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DTOServlet</servlet-name>
+        <url-pattern>/action/dto</url-pattern>
     </servlet-mapping>
 </web-app>

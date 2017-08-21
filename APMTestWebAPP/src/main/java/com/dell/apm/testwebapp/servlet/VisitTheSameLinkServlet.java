@@ -1,5 +1,6 @@
 package com.dell.apm.testwebapp.servlet;
 
+import com.dell.apm.testwebapp.com.dell.apm.testwebapp.servlet.util.HttpConnUtil;
 import org.apache.commons.io.IOUtils;
 
 import javax.servlet.ServletConfig;
@@ -20,8 +21,8 @@ import java.util.Date;
  * Time: 下午5:05
  * To change this template use File | Settings | File Templates.
  */
-public class VisitLinkServlet extends HttpServlet{
-    final String UTF_8_ENCODING = "UTF-8";
+public class VisitTheSameLinkServlet extends HttpServlet{
+
     private String configHost;
     @Override
     public void init(ServletConfig config) throws ServletException {
@@ -48,13 +49,7 @@ public class VisitLinkServlet extends HttpServlet{
             long t0 = System.currentTimeMillis();
             String url = buildUrl(count);
 
-            urlConn = (HttpURLConnection) new URL(url).openConnection();
-            urlConn.setDoOutput(true);
-            urlConn.setDoInput(true);
-            urlConn.setUseCaches(false);
-            urlConn.setRequestMethod("GET");
-            urlConn.connect();
-            String responseContent = IOUtils.toString(urlConn.getInputStream(), UTF_8_ENCODING);
+            String responseContent = HttpConnUtil.visitURL(url);
             long spentTime = System.currentTimeMillis() - t0;
 
             StringBuilder sb = new StringBuilder();
@@ -78,7 +73,7 @@ public class VisitLinkServlet extends HttpServlet{
     private void outputContent(HttpServletResponse res, String content) throws IOException {
         res.setContentType("text/html");
         PrintWriter out = res.getWriter();
-        out.println("<html><head><title>VisitLinkServlet</title></head>");
+        out.println("<html><head><title>VisitTheSameLinkServlet</title></head>");
         out.println("<body> current Time:" + new Date() + "<br/>" +content +"</body></html>");
         out.flush();
     }
