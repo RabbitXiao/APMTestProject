@@ -31,16 +31,6 @@ Visit a special URL /action/sleepAFixedTime with a fixed time.
      <li><a href="<%=requestURL%>action/sleepAFixedTime?sleepTime=3">/action/sleepAFixedTime?sleepTime=3</a></li>
 </ul>
 
-<h4>DepartmentServlet</h4>
-<ul>
-    <li><a href="<%=requestURL%>action/department">/action/department</a></li>
-</ul>
-
-<h4>DTOServlet</h4>
-<ul>
-    <li><a href="<%=requestURL%>action/dto">/action/dto</a></li>
-</ul>
-
 <h4>Error Hits</h4>
 Response code is 500.
 <ul>
@@ -91,10 +81,13 @@ Accessing a webservice. You can modify the Webservice server IP and port in file
     <li><a href="<%=requestURL%>action/VisitLink?count=5">/action/VisitLink?count=3</a></li>
 </ul>
 
-
-
-
-
-
+<h4>InvokeHighCPULoad</h4>
+(Note: 1 loop 0-100,000: spend nearly 2s)<br/>
+(Note: 1 loop 0-1,000,000: spend nearly 20s)<br/>
+(Note: 1 loop 0-10,000,000: spend nearly 200s)<br/>
+<ul>
+    <li><a href="${pageContext.request.contextPath }/action/InvokeHighCPULoad?loopTimes=1&minV=0&maxV=100000">/action/InvokeHighCPULoad?loopTimes=1&minV=0&maxV=100000</a></li>
+    <li><a href="${pageContext.request.contextPath }/action/InvokeHighCPULoad?loopTimes=1&minV=0&maxV=100000&multithread=true&threadCount=4">/action/InvokeHighCPULoad?loopTimes=1&minV=0&maxV=100000&multithread=true&threadCount=4</a></li>
+</ul>
 </body>
 </html>

@@ -16,3 +16,5 @@ mvn package
 
 5. Generate client java code for webservice:
 mvn clean jaxws:wsimport
+
+The application(.war) can be running in Tomcat.

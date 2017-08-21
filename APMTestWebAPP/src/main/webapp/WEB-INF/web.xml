@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee"
+<!--<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee"
          xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          id="WebApp_ID" version="2.5">
-
+-->
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+            version="3.0">
     <display-name>APMTestWebAPP</display-name>
     <servlet>
         <servlet-name>SayHelloServlet</servlet-name>
@@ -88,19 +91,11 @@
         <url-pattern>/action/acquireMultipleDataSource</url-pattern>
     </servlet-mapping>
     <servlet>
-        <servlet-name>DepartmentServlet</servlet-name>
-        <servlet-class>com.dell.apm.testwebapp.servlet.DepartmentServlet</servlet-class>
+        <servlet-name>InvokeHighCPULoad</servlet-name>
+        <servlet-class>com.dell.apm.testwebapp.servlet.InvokeHighCPULoad</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>DepartmentServlet</servlet-name>
-        <url-pattern>/action/department</url-pattern>
-    </servlet-mapping>
-    <servlet>
-        <servlet-name>DTOServlet</servlet-name>
-        <servlet-class>com.dell.apm.testwebapp.servlet.dto.DTOServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>DTOServlet</servlet-name>
-        <url-pattern>/action/dto</url-pattern>
+        <servlet-name>InvokeHighCPULoad</servlet-name>
+        <url-pattern>/action/InvokeHighCPULoad</url-pattern>
     </servlet-mapping>
 </web-app>

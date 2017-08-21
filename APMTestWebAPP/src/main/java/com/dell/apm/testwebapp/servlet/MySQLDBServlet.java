@@ -12,10 +12,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Date;
 
 /**
  * Created by rxiao on 4/3/14.
@@ -49,8 +51,8 @@ public class MySQLDBServlet extends HttpServlet {
             StringBuffer sb = new StringBuffer();
             sb.append("Sleep Time: " + sleepTime + "s. <br/>");
             sb.append(DBUtil.excuteQueryForDB(connection));
-            logger.info("Excute DB Query:<br/> " + sb.toString());
-            response.getWriter().println(sb.toString());
+            //logger.info("Excute DB Query:<br/> " + sb.toString());
+            outputContent(response, sb.toString());
         } catch (Exception e) {
             throw new ServletException(e);
         } finally {
@@ -62,5 +64,13 @@ public class MySQLDBServlet extends HttpServlet {
                 }
             }
         }
+    }
+
+    private void outputContent(HttpServletResponse res, String content) throws IOException {
+        res.setContentType("text/html");
+        PrintWriter out = res.getWriter();
+        out.println("<html><head><title>SleepAFixedTimeServlet</title></head>");
+        out.println("<body> current Time:" + new Date() + "<br/>" + content + "</body></html>");
+        out.flush();
     }
 }

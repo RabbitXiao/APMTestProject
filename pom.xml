@@ -23,7 +23,5 @@
   <modules>
     <module>APMTestWebApp</module>
     <module>APMTestServiceAPP</module>
-    <module>APMTestJavaEE</module>
-    <module>t_artifactId</module>
   </modules>
 </project>
