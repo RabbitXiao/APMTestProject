@@ -1,14 +1,12 @@
 package com.dell.apm.testwebapp.servlet;
 
-import com.dell.apm.testwebapp.com.dell.apm.testwebapp.servlet.util.HttpConnUtil;
-import org.apache.commons.io.IOUtils;
+import com.dell.apm.testwebapp.util.HttpConnUtil;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.net.HttpURLConnection;
-import java.net.URL;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import java.io.PrintWriter;

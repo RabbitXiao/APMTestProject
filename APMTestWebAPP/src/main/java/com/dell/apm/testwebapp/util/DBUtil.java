@@ -1,13 +1,11 @@
-package com.dell.apm.testwebapp.com.dell.apm.testwebapp.servlet.util;
+package com.dell.apm.testwebapp.util;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-/**
- * Created by rxiao on 7/23/14.
- */
+
 public class DBUtil {
     /**
      * Excute a query from DB, return the result string.

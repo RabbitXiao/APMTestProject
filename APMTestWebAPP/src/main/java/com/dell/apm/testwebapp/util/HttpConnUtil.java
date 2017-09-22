@@ -1,4 +1,4 @@
-package com.dell.apm.testwebapp.com.dell.apm.testwebapp.servlet.util;
+package com.dell.apm.testwebapp.util;
 
 import org.apache.commons.io.IOUtils;
 
